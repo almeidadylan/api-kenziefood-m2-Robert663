@@ -1,27 +1,24 @@
 body{
-    background-color: white;
     height: 100vh;
 }
 #logo1{
     position: absolute;
-    left: 10.77%;
-    right: 81.82%;
-    top: 2.28%;
+    left: 5.77%;
+    right: 75.82%;
+    top: 5.28%;
     bottom: 96.81%;
-    height: 100px;
+    height: 68px;
     background: #FF2253;
     border: 3.38983px solid #FF2253;
-    /* border-radius: 100% 100% 0% 0%; */
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
-    /* border-bottom: 0; */
     clip-path: inset(0 0 50px 0);
 }
 #logo2{
     position: absolute;
     left: 13.77%;
     right: 84.82%;
-    top: 1.28%;
+    top: 4.28%;
     bottom: 96.81%;
     background: #FF2253;
     border: 3.38983px solid #FF2253;
@@ -35,5 +32,102 @@ h1{
     bottom: 94.81%;
 }
 #searchBar{
-    color: white;
+    height: 30px;
+    position: absolute;
+    left: 3%;
+    right: 0%;
+    top: 17%;
+    bottom: 0%;
+    background: #F8F9FA;
+    border: 1.65434px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 33.0868px;
+    width: 82%;
 }
+#buttonSearch{
+    background: #FFE9EE;
+    height: 44px;
+    position: absolute;
+    left: 85%;
+    right: 0%;
+    top: 16%;
+    color: #FF2253;
+    width: 14%;
+    bottom: 0%;
+    border-radius: 100%;
+    border: 1.65434px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 33.0868px;
+}
+#filtro{
+    display:flex;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+#filtro>button{
+    position: static;
+    width: 148px;
+    height: 40px;
+    margin-right: 10px;
+    background: #F8F9FA;
+    border: 1.5px solid #212529;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+#vitrine{
+    display:flex;
+    position:absolute;
+    top: 50%;
+    left: 30%;
+}
+
+#vitrine>h2{
+    display:flex;
+    flex-direction: column;
+}
+#rectangle{
+    position: absolute;
+    width: 342px;
+    height: 59.85px;
+    left: 18px;
+    top: 616px;
+    background: #FF2253;
+    border-radius: 14.9625px 14.9625px 0px 0px;
+}
+#carrinho{
+    position: absolute;
+    width: 340.93px;
+    height: 432.84px;
+    left: 18px;
+    top: 682.26px;
+    background: #F8F9FA;
+
+}
+/* Media:
+
+#logo1{
+    position: absolute;
+    left: 10.77%;
+    right: 81.82%;
+    top: 2.28%;
+    bottom: 96.81%;
+    height: 100px;
+    background: #FF2253;
+    border: 3.38983px solid #FF2253;
+
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+
+    clip-path: inset(0 0 50px 0);
+}
+#logo2{
+    position: absolute;
+    left: 13.77%;
+    right: 84.82%;
+    top: 1.28%;
+    bottom: 96.81%;
+    background: #FF2253;
+    border: 3.38983px solid #FF2253;
+    border-radius: 100%;
+} */
