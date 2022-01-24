@@ -1,3 +1,39 @@
-#logo{
-
+body{
+    background-color: white;
+    height: 100vh;
+}
+#logo1{
+    position: absolute;
+    left: 10.77%;
+    right: 81.82%;
+    top: 2.28%;
+    bottom: 96.81%;
+    height: 100px;
+    background: #FF2253;
+    border: 3.38983px solid #FF2253;
+    /* border-radius: 100% 100% 0% 0%; */
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    /* border-bottom: 0; */
+    clip-path: inset(0 0 50px 0);
+}
+#logo2{
+    position: absolute;
+    left: 13.77%;
+    right: 84.82%;
+    top: 1.28%;
+    bottom: 96.81%;
+    background: #FF2253;
+    border: 3.38983px solid #FF2253;
+    border-radius: 100%;
+}
+h1{
+    position: absolute;
+    left: 10.77%;
+    right: 81.82%;
+    top: 8.28%;
+    bottom: 94.81%;
+}
+#searchBar{
+    color: white;
 }
