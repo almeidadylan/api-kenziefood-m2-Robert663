@@ -3,11 +3,11 @@ body{
 }
 #logo1{
     position: absolute;
-    left: 5.77%;
-    right: 75.82%;
+    left: 10.77%;
+    right: 77.82%;
     top: 5.28%;
     bottom: 96.81%;
-    height: 68px;
+    height: 60px;
     background: #FF2253;
     border: 3.38983px solid #FF2253;
     border-top-left-radius: 100%;
@@ -16,9 +16,9 @@ body{
 }
 #logo2{
     position: absolute;
-    left: 13.77%;
-    right: 84.82%;
-    top: 4.28%;
+    left: 15.77%;
+    right: 83.82%;
+    top: 4.5%;
     bottom: 96.81%;
     background: #FF2253;
     border: 3.38983px solid #FF2253;
@@ -34,15 +34,12 @@ h1{
 #searchBar{
     height: 30px;
     position: absolute;
-    left: 3%;
-    right: 0%;
-    top: 17%;
-    bottom: 0%;
+    top: 15.49%;
     background: #F8F9FA;
     border: 1.65434px solid #F8F9FA;
     box-sizing: border-box;
     border-radius: 33.0868px;
-    width: 82%;
+    width: 80%;
 }
 #buttonSearch{
     background: #FFE9EE;
@@ -60,16 +57,23 @@ h1{
     border-radius: 33.0868px;
 }
 #filtro{
-    display:flex;
+    display: flex;
     position: absolute;
     top: 25%;
-    width: 100%;
+    overflow-x: scroll;
+    width: 50%;
+    left: 10%;
+}
+#filtro::-webkit-scrollbar{
+    display: none;
 }
 #filtro>button{
     position: static;
-    width: 148px;
-    height: 40px;
+    display:flex;
+    align-items: center;
     margin-right: 10px;
+    width: 150px;
+    height: 40px;
     background: #F8F9FA;
     border: 1.5px solid #212529;
     box-sizing: border-box;
@@ -102,7 +106,6 @@ h1{
     left: 18px;
     top: 682.26px;
     background: #F8F9FA;
-
 }
 /* Media:
 
