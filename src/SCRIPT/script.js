@@ -99,6 +99,7 @@ class TemplateVitrine{
         teste.appendChild(button)
         teste.setAttribute('id', 'teste')
         div.appendChild(teste)
+        button.setAttribute('class', 'btn-adicionar-carrinho')
     }
     static templateG(array,tagTarget){
         tagTarget.innerHTML = ''

@@ -2,6 +2,10 @@ body{
     height: 100vh;
     font-family: 'Poppins'
 }
+
+button{
+    height: 30px;
+}
 #filtro button img{
     margin-right: 15px;
 }
@@ -15,7 +19,7 @@ body{
     width: 294px;
 }
 label{
-   display:flex;
+    display:flex;
 }
 .cardV{
     padding: 15px;
@@ -31,10 +35,10 @@ label{
     line-height: 27px;
 }
 .testando2{
-   line-height: 20px;
-   height: 80px;
-   font-weight: 400;
-   color: #828282;
+    line-height: 20px;
+    height: 80px;
+    font-weight: 400;
+    color: #828282;
 }
 #searchBar{
     padding: 25px;
@@ -76,9 +80,10 @@ label{
     border: 1.5px solid #212529;
     box-sizing: border-box;
     border-radius: 30px;
+    justify-content: center;
 }
 #filtro button:nth-child(n+2){
-    background: #FFE9EE;
+    /*background: #FFE9EE;*/
     padding: 10px;
 }
 #filtro button:nth-child(1){
@@ -128,9 +133,41 @@ label{
     margin-left: 15px;
     height: 432.84px;
     background: #F8F9FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:solid 1px #FF2253;
+    border-radius: 0 0 10px 10px;
 }
 
-@media(min-width: 720px){
+.btn-adicionar-carrinho{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(209, 204, 204);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.ops{
+    color:#868E96;
+    font-weight: 1000;
+    margin: 18px 0px;
+}
+.texto-carrinho{
+    color: #868E96;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.btn-todos{
+    width: 150px;
+}
+
+@media(min-width: 800px){
     #logo{
         position: absolute;
         left: 5%;
@@ -145,10 +182,74 @@ label{
         width: 20%;
     }
     #filtro button:nth-child(1){
-        width: 3.5%;
+        /*width: 3.5%;*/
     }
     #vitrine{
-        flex-direction: row;
+        width: 90%;
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
+    .cardV{
+        width: 300px;
+    }
+
+    #corpo-do-site{
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    #carrinho-de-compras{
+        width: 350px;
+    }
+
+    figcaption{
+        border: solid #fff 1px;
+        border-radius: 10px;
+        background-color: #fff;
+        width: 120px;
+    }
+    #todos{
+        height: 30px;
+    }
+    #todos:hover{
+        color: #fff;
+        background-color: #FF2253;
+    }
+    #panificdora{
+        height: 30px;
+    }
+    #panificadora:hover{
+        background-color: #FF2253;
+        color: #fff;
+    }
+    #frutas{
+        height: 30px;
+    }
+    #frutas:hover{
+        background-color: #FF2253;
+        color: #fff;
+    }
+    #bebidas{
+        height: 30px;
+    }
+    #bebidas:hover{
+        background-color: #FF2253;
+        color: #fff;
+    }
+
+
+    #searchBar:hover::placeholder{
+        padding-left: 10px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    #buttonSearch:hover{
+        background-color: #FF2253;
+        color: #fff;
+    }
+
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,23 +33,30 @@
     </header>
     <main>
             <div id = 'filtro'>
-                <button>Todos</button>
-                <button >
+                <button id='todos'>Todos</button>
+                <button id='panificadora'>
                     <img src="/src/CSS/assets/Icon_Panificadora.svg" alt="">
                     Panificadora</button>
-                <button>
+                <button id='frutas'>
                     <img src="/src/CSS/assets/Icon_Frutas.svg" alt="">
                     Frutas</button>
-                <button>
+                <button id="bebidas">
                     <img src="/src/CSS/assets/Icon_Bebidas.svg" alt="">
                     Bebidas</button>
             </div>
-            <div id = 'vitrine'></div>
-            <div id = 'rectangle'>
-                <span> <i class="fa fa-cart-arrow-down"></i></span>
-                    <span>Carrinho</span>
+            <div id='corpo-do-site'>
+                <div id = 'vitrine'></div>
+                <div id='carrinho-de-compras'>
+                    <div id = 'rectangle'>
+                        <span> <i class="fa fa-cart-arrow-down"></i></span>
+                        <span>Carrinho</span>
+                    </div>
+                    <div id = 'carrinho'>
+                        <img src="./src/CSS/assets/shopping-bag.svg" alt="">
+                        <h2 class="ops">Ops!</h2>
+                        <span class='texto-carrinho'>Por enquanto não temos produtos no carrinho</span>
+                    </div>
             </div>
-            <div id = 'carrinho'></div>
         </main>
         <script src="/src/SCRIPT/script.js"></script>
 </body>
