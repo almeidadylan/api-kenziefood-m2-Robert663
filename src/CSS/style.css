@@ -33,6 +33,12 @@ label{
     font-weight: 700;
     font-size: 16px;
     line-height: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+p{
+    height: 80px;
 }
 .testando2{
     line-height: 20px;
@@ -172,7 +178,7 @@ label{
 
 .cardC{
     display: flex;
-    height: 100px;
+    height: 70px;
     width: 95%;
     margin: 10px 17px;
     justify-content: space-between;
@@ -213,6 +219,14 @@ label{
     height: 25px;
 }
 
+.teste{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+
 #carrinho{
     overflow-y: scroll;
 }
@@ -241,6 +255,7 @@ figcaption{
     position: absolute;
     margin-top: -25px;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 @media(min-width: 800px){
@@ -267,6 +282,8 @@ figcaption{
     }
     .cardV{
         width: 300px;
+        display: flex;
+        flex-direction: column;
     }
 
     #corpo-do-site{
@@ -307,7 +324,7 @@ figcaption{
         background-color: #FF2253;
         border: solid #212529 1px;
     }
-    #panificdora{
+    #panificadora{
         height: 30px;
         border: none;
         cursor: pointer;
@@ -377,6 +394,10 @@ figcaption{
     .testando{
         border: 3px solid #FFE9EE;
         border-radius: 8px;
+    }
+
+    .teste{
+        display: flex;
     }
 
 }
