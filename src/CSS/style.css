@@ -83,7 +83,6 @@ label{
     justify-content: center;
 }
 #filtro button:nth-child(n+2){
-    /*background: #FFE9EE;*/
     padding: 10px;
 }
 #filtro button:nth-child(1){
@@ -180,9 +179,6 @@ label{
     }
     #searchBar{
         width: 20%;
-    }
-    #filtro button:nth-child(1){
-        /*width: 3.5%;*/
     }
     #vitrine{
         width: 90%;
