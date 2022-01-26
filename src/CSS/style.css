@@ -181,9 +181,6 @@ label{
     #searchBar{
         width: 20%;
     }
-    #filtro button:nth-child(1){
-        /*width: 3.5%;*/
-    }
     #vitrine{
         width: 90%;
         display: flex;

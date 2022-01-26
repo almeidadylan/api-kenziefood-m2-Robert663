@@ -153,6 +153,7 @@ class ListenerFiltro{
         const buttonsFiltros = document.getElementsByTagName('button')
         for(let i = 0; i < 5; i++){
             buttonsFiltros[i].addEventListener('click', this.tiposFiltros);
+         
         }
     }
     
@@ -160,7 +161,7 @@ class ListenerFiltro{
         let produtosFiltrados = []
         document.getElementById('vitrine').innerHTML = '';
         const click = event.target;
-        if(click.id === 'Todos'){
+        if(click.id === 'todos'){
             TemplateVitrine.templateG(produtos, document.getElementById('vitrine'))
         } else if(click.id === 'buttonSearch'){
             const palavra = document.getElementById('searchBar').value.toLowerCase()
@@ -180,7 +181,7 @@ class ListenerFiltro{
                 h2.innerText = `Produtos não encontrados`
             }
         } else{
-            produtosFiltrados = produtos.filter(element => element.categoria === click.id)
+            produtosFiltrados = produtos.filter(element => element.categoria.toLowerCase() === click.id)
             TemplateVitrine.templateG(produtosFiltrados, document.getElementById('vitrine'))
         }
     }
