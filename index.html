@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/CSS/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./src/CSS/style.css">
     <title>Document</title>
@@ -30,28 +33,33 @@
     </header>
     <main>
             <div id = 'filtro'>
-                <button id="Todos">Todos</button>
-                <button id="Panificadora">
-                    <img src="/src/CSS/assets/Icon_Panificadora.svg" alt="" id="Panificadora">
+                <button id="todos">Todos</button>
+                <button id="panificadora">
+                    <img src="/src/CSS/assets/Icon_Panificadora.svg" alt="" id="panificadora">
                     Panificadora</button>
-                <button id="Frutas">
-                    <img src="/src/CSS/assets/Icon_Frutas.svg" alt="" id="Frutas">
+                <button id="frutas">
+                    <img src="/src/CSS/assets/Icon_Frutas.svg" alt="" id="frutas">
                     Frutas</button>
-                <button id="Bebidas">
-                    <img src="/src/CSS/assets/Icon_Bebidas.svg" alt="" id="Bebidas">
+                <button id="bebidas">
+                    <img src="/src/CSS/assets/Icon_Bebidas.svg" alt="" id="bebidas">
                     Bebidas</button>
             </div>
-            <div id = 'vitrine'>
-                
-            </div>
-            <div id = 'rectangle'>
-                <span>Carrinho</span>
-            </div>
-            <div id = 'carrinho'>
-            </div>
-            <div>
-                <h3 id="totalQuant"></h3>
-                <h3 id="totalPreco"></h3>
+            <div id='corpo-do-site'>
+                <div id = 'vitrine'></div>
+                <div id='carrinho-de-compras'>
+                    <div id = 'rectangle'>
+                        <span> <i class="fa fa-cart-arrow-down"></i></span>
+                        <span>Carrinho</span>
+                    </div>
+                    <div id = 'carrinho'>
+                        <img src="./src/CSS/assets/shopping-bag.svg" alt="">
+                        <h2 class="ops">Ops!</h2>
+                        <span class='texto-carrinho'>Por enquanto não temos produtos no carrinho</span>
+                    </div>
+                    <div id = 'testee'>
+                            <h3 id="totalQuant"></h3>
+                            <h3 id="totalPreco"></h3>
+                    </div>
             </div>
         </main>
         <script type="module" src="./src/CSS/domv3.js"></script>
