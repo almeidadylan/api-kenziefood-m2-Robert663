@@ -65,7 +65,9 @@ let totalPreco = 0
 let totalQuant = 0
 class TemplateVitrine{
     static templateU(item,tagTarget){
+        
         const div = document.createElement('div')
+        const div2 = document.createElement('div')
         const figure = document.createElement('figure')
         const img = document.createElement('img')
         const figcaption = document.createElement('figcaption')
@@ -75,14 +77,17 @@ class TemplateVitrine{
         const button = document.createElement('button')
         let aparec = document.createElement('i')
         const teste = document.createElement('div')
+
+
         tagTarget.appendChild(div)
         div.setAttribute('class','cardV')
         div.appendChild(figure)
+        div2.setAttribute('class', 'div-categoria')
         img.src = item.imagem
         img.alt = item.descricao
         img.setAttribute('class', 'testando')
         figure.appendChild(img)
-        div.appendChild(figcaption)
+        div2.appendChild(figcaption)
         figcaption.innerHTML = `<img src=./src/CSS/assets/Icon_${item.categoria}.svg alt=""> ${item.categoria}`
         figure.appendChild(figcaption)
         div.appendChild(h2)
@@ -134,6 +139,12 @@ class TemplateCarrinho{
     let aparec = document.createElement('i')
     button.appendChild(aparec)
     aparec.setAttribute('class','fa fa-trash')
+    img.setAttribute('class', 'imagens-carrinho')
+    div2.setAttribute('class', 'descricao')
+    h2.setAttribute('class', 'h2')
+    h3.setAttribute('class', 'h3')
+    h4.setAttribute('class', 'h4')
+    button.setAttribute('class', 'btn-delete')
 }
 static templateG(array,tagTarget){
     tagTarget.innerHTML = ''
@@ -142,4 +153,5 @@ static templateG(array,tagTarget){
     });
 }
 }
-// TemplateCarrinho.templateG(produtos,document.getElementById('carrinho'))
+TemplateCarrinho.templateG(produtos,document.getElementById('carrinho'))
+
