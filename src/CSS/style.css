@@ -65,6 +65,7 @@ label{
 #filtro::-webkit-scrollbar{
     display: none;
 }
+
 #filtro button{
     display:flex;
     align-items: center;
@@ -146,6 +147,11 @@ label{
     }
     #filtro button:nth-child(1){
         width: 3.5%;
+        
+    }
+    #filtro button:hover{
+        background: chartreuse;
+        color: white;
     }
     #vitrine{
         flex-direction: row;
