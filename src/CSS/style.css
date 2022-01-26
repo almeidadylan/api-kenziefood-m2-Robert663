@@ -1,89 +1,106 @@
 body{
     height: 100vh;
+    font-family: 'Poppins'
 }
-#logo1{
-    position: absolute;
-    left: 10.77%;
-    right: 77.82%;
-    top: 5.28%;
-    bottom: 96.81%;
-    height: 60px;
-    background: #FF2253;
-    border: 3.38983px solid #FF2253;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
-    clip-path: inset(0 0 50px 0);
+#filtro button img{
+    margin-right: 15px;
 }
-#logo2{
-    position: absolute;
-    left: 15.77%;
-    right: 83.82%;
-    top: 4.5%;
-    bottom: 96.81%;
-    background: #FF2253;
-    border: 3.38983px solid #FF2253;
-    border-radius: 100%;
+#teste{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 }
-h1{
-    position: absolute;
-    left: 10.77%;
-    right: 81.82%;
-    top: 8.28%;
-    bottom: 94.81%;
+.testando{
+    width: 294px;
+}
+label{
+   display:flex;
+}
+.cardV{
+    padding: 15px;
+}
+.cardV figcaption{
+    color: #212529;
+    font-weight: 500;
+}
+.cardV h2{
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+}
+.testando2{
+   line-height: 20px;
+   height: 80px;
+   font-weight: 400;
+   color: #828282;
 }
 #searchBar{
-    height: 30px;
-    position: absolute;
-    top: 15.49%;
+    padding: 25px;
+    height: 54.04px;
     background: #F8F9FA;
     border: 1.65434px solid #F8F9FA;
     box-sizing: border-box;
     border-radius: 33.0868px;
-    width: 80%;
+    width: 100%;
 }
 #buttonSearch{
     background: #FFE9EE;
-    height: 44px;
-    position: absolute;
-    left: 85%;
-    right: 0%;
-    top: 16%;
+    height: 58.12px;
     color: #FF2253;
-    width: 14%;
-    bottom: 0%;
-    border-radius: 100%;
+    width: 75.12px;
     border: 1.65434px solid #F8F9FA;
     box-sizing: border-box;
     border-radius: 33.0868px;
 }
 #filtro{
     display: flex;
-    position: absolute;
-    top: 25%;
+    margin-left: 25px;
+    margin-left: 25px;
     overflow-x: scroll;
-    width: 50%;
-    left: 10%;
+    width: 100%;
+
 }
 #filtro::-webkit-scrollbar{
     display: none;
 }
-#filtro>button{
-    position: static;
+#filtro button{
     display:flex;
     align-items: center;
     margin-right: 10px;
+    color:#212529;
     width: 150px;
-    height: 40px;
-    background: #F8F9FA;
+    padding: 5px;
+    margin-bottom: 40px;
     border: 1.5px solid #212529;
     box-sizing: border-box;
     border-radius: 30px;
 }
+#filtro button:nth-child(n+2){
+    background: #FFE9EE;
+    padding: 10px;
+}
+#filtro button:nth-child(1){
+    margin-right: 15px;
+}
+
 #vitrine{
     display:flex;
-    position:absolute;
-    top: 50%;
-    left: 30%;
+    overflow-x: scroll;
+}
+#vitrine::-webkit-scrollbar{
+    display:none;
+}
+#card{
+    display: flex;
+    flex-direction: column;
+    background: #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
 }
 
 #vitrine>h2{
@@ -91,46 +108,47 @@ h1{
     flex-direction: column;
 }
 #rectangle{
-    position: absolute;
-    width: 342px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 15px;
     height: 59.85px;
-    left: 18px;
-    top: 616px;
     background: #FF2253;
+    color: #ffffff;
     border-radius: 14.9625px 14.9625px 0px 0px;
 }
+#rectangle span{
+    padding: 15px;
+    font-weight: 700;
+    line-height: 28px;
+    font-style: normal;
+    font-size: 17px;
+}
 #carrinho{
-    position: absolute;
-    width: 340.93px;
+    margin-left: 15px;
     height: 432.84px;
-    left: 18px;
-    top: 682.26px;
     background: #F8F9FA;
 }
-/* Media:
 
-#logo1{
-    position: absolute;
-    left: 10.77%;
-    right: 81.82%;
-    top: 2.28%;
-    bottom: 96.81%;
-    height: 100px;
-    background: #FF2253;
-    border: 3.38983px solid #FF2253;
-
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
-
-    clip-path: inset(0 0 50px 0);
+@media(min-width: 720px){
+    #logo{
+        position: absolute;
+        left: 5%;
+    }
+    label{
+        display:flex;
+        justify-content: flex-end;
+        width: 90%;
+        margin-top: 5px;
+    }
+    #searchBar{
+        width: 20%;
+    }
+    #filtro button:nth-child(1){
+        width: 3.5%;
+    }
+    #vitrine{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
-#logo2{
-    position: absolute;
-    left: 13.77%;
-    right: 84.82%;
-    top: 1.28%;
-    bottom: 96.81%;
-    background: #FF2253;
-    border: 3.38983px solid #FF2253;
-    border-radius: 100%;
-} */
