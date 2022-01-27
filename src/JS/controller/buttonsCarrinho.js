@@ -32,3 +32,28 @@ class ListerButtons{
                 h3totalPreco.innerText = `R$ ${totalPreco.toFixed(2).replace('.',',')}`
             }
     }
+    static removeCart(){
+        const cliquei = event.target;
+        const idClick = Number(cliquei.id)
+        const clicado = arrayCarrinho.find(element => element.id == idClick)
+        totalQuant  -= clicado.quant
+        totalPreco -= (clicado.quant)*(clicado.preco)
+        if(totalQuant <= 0){
+            totalQuant = 0
+            document.getElementById('carrinho').innerHTML = `<div id = 'carrinhoVazio'>
+            <img src="./src/CSS/assets/shopping-bag.svg" alt="">
+            <h2 class="ops">Ops!</h2>
+            <span class='texto-carrinho'>Por enquanto não temos produtos no carrinho</span>
+        </div>`
+            document.getElementById('valoresCarrinho').style.display = 'none'
+            
+        } else{
+            h3totalQuant.innerText = `${totalQuant}`
+            h3totalPreco.innerText = `R$ ${totalPreco.toFixed(2).replace('.',',')}`
+        }
+        let number = arrayCarrinho.indexOf(clicado)
+        arrayCarrinho.splice(number, 1)
+        TemplateCarrinho.templateG(arrayCarrinho,document.getElementById('carrinho'))
+    }
+}
+export {ListerButtons}

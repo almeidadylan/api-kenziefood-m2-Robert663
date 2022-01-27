@@ -148,7 +148,7 @@ h6{
 }
 #carrinho{
     margin-left: 15px;
-    height: 432.84px;
+    height: 532px;
     background: #F8F9FA;
     display: flex;
     flex-direction: column;
@@ -378,7 +378,7 @@ figcaption{
     }
 
     #frutas{
-        height: 30px;
+        height: 35px;
         border: none;
         cursor: pointer;
     }
@@ -387,7 +387,7 @@ figcaption{
     }
   
     #bebidas{
-        height: 30px;
+        height: 35px;
         border: none;
         cursor: pointer;
     }
@@ -438,6 +438,10 @@ figcaption{
 
     .valoresVitrine{
         display: flex;
+    }
+
+    img{
+        margin: 1px;
     }
 
 }

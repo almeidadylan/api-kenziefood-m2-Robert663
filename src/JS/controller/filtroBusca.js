@@ -26,3 +26,41 @@ class ListenerFiltro{
             const resultadoBusca  = ListenerFiltro.filtroAtivo(buscaInput)
             if(resultadoBusca.length !== 0){
                 TemplateVitrine.templateG(resultadoBusca, vitrine)
+            }else{
+                vitrine.innerHTML = ''
+                const h6 = document.createElement('h6')
+                vitrine.appendChild(h6)
+                h6.innerText = 'Produtos não encontrados'
+            }
+        })
+    }
+    static tiposFiltros(event){
+        let produtosFiltrados = []
+        vitrine.innerHTML = '';
+        const click = event.target;
+        if(click.id === 'todos'){
+            TemplateVitrine.templateG(produtos, vitrine)
+        } else if(click.id === 'buttonSearch'){
+            const palavra = document.getElementById('searchBar').value.toLowerCase()
+            let resultado = []
+            produtos.forEach(element =>{
+                let elemento = element.nome.toLowerCase()
+                if(elemento.includes(palavra)){
+                    resultado.push(element)
+                }
+            })
+            if(resultado.length !== 0){
+                TemplateVitrine.templateG(resultado, vitrine)
+            } else{
+                vitrine.innerHTML = ''
+                const h6 = document.createElement('h6')
+                vitrine.appendChild(h6)
+                h6.innerText = 'Produtos não encontrados'
+            }
+        } else{
+            produtosFiltrados = produtos.filter(element => element.categoria.toLowerCase() === click.id)
+            TemplateVitrine.templateG(produtosFiltrados, vitrine)
+        }
+    }
+}
+export {ListenerFiltro}

@@ -42,19 +42,11 @@ class TemplateVitrine{
         
         let aparec = document.createElement('i')
         button.appendChild(aparec)
-<<<<<<< HEAD
-        aparec.setAttribute('class','fa fa-cart-arrow-down')
-        teste.appendChild(h3)
-        teste.appendChild(button)
-        teste.setAttribute('class', 'teste')
-        div.appendChild(teste)
-=======
         
         div.setAttribute('class','cardV')
         div2.setAttribute('class', 'div-categoria')
         img.setAttribute('class', 'cardImage')
         valoresVitrine.setAttribute('id', 'valoresVitrine')
->>>>>>> c73d6b58287366c6d8513544070d4c88813e022f
         button.setAttribute('class', 'btn-adicionar-carrinho')
         button.setAttribute('id', `${item.id}`)
         aparec.setAttribute('class','fa fa-cart-arrow-down')
