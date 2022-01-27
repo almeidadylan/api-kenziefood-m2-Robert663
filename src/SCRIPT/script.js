@@ -102,7 +102,7 @@ class TemplateVitrine{
         aparec.setAttribute('class','fa fa-cart-arrow-down')
         teste.appendChild(h3)
         teste.appendChild(button)
-        teste.setAttribute('id', 'teste')
+        teste.setAttribute('class', 'teste')
         div.appendChild(teste)
         button.setAttribute('class', 'btn-adicionar-carrinho')
     }

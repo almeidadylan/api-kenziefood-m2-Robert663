@@ -98,6 +98,11 @@ p{
     display:flex;
     overflow-x: scroll;
 }
+h6{
+    margin-left: 67px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
 #vitrine::-webkit-scrollbar{
     display:none;
 }
@@ -141,10 +146,32 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border:solid 1px #FF2253;
     border-radius: 0 0 10px 10px;
 }
+#carrinhoVazio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#carrinhoVazioH{
+    display:none;
+}
+#testee{
+    display: none;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-around;
+}
+#qtd{
+    display: flex;
+    justify-content: space-between;
+}
+#valorTotal{
+    display: none;
+    justify-content: space-between;
 
+}
 .btn-adicionar-carrinho{
     width: 40px;
     height: 40px;
@@ -252,16 +279,18 @@ figcaption{
     border-radius: 30px;
     height: 30px;
     text-align: center;
-    position: absolute;
+    position: relative;
     margin-top: -25px;
     margin-left: 15px;
-    cursor: pointer;
 }
 
 @media(min-width: 800px){
     #logo{
         position: absolute;
         left: 5%;
+    }
+    #valorTotal{
+        display: flex;
     }
     label{
         display:flex;
@@ -275,10 +304,15 @@ figcaption{
 
     }
     #vitrine{
-        width: 90%;
+        width: 60%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    h6{
+        display:flex;
+        align-items: center;
+        font-size: 24px;
     }
     .cardV{
         width: 300px;
@@ -289,6 +323,7 @@ figcaption{
     #corpo-do-site{
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
     #buttonSearch{
         margin-top: 1.5px;
@@ -320,9 +355,8 @@ figcaption{
         cursor: pointer;
     }
     #todos:hover{
+        background-color: #ff2253;
         color: #fff;
-        background-color: #FF2253;
-        border: solid #212529 1px;
     }
     #panificadora{
         height: 30px;
@@ -330,29 +364,25 @@ figcaption{
         cursor: pointer;
     }
     #panificadora:hover{
-        background-color: #FF2253;
-        color: #fff;
-        border: solid #212529 1px;
+        border: solid 1px #212529;
     }
+
     #frutas{
         height: 30px;
         border: none;
         cursor: pointer;
     }
     #frutas:hover{
-        background-color: #FF2253;
-        color: #fff;
-        border: solid #212529 1px;
+        border: #212529 solid 1px;
     }
+  
     #bebidas{
         height: 30px;
         border: none;
         cursor: pointer;
     }
     #bebidas:hover{
-        background-color: #FF2253;
-        color: #fff;
-        border: solid #212529 1px;
+        border: #212529 solid 1px;
     }
 
 
