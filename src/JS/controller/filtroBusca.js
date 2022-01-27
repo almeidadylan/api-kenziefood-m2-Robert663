@@ -5,9 +5,8 @@ FetchProdutos.buscandoProdutos()
 .then(data => {
     data.forEach(element => produtos.push(element))
     TemplateVitrine.templateG(data,document.getElementById('vitrine'))
-}
+    }
 )
-
 class ListenerFiltro{
     static filtroAtivo(pesquisa){
         pesquisa = pesquisa.toLowerCase().trim()
@@ -25,10 +24,16 @@ class ListenerFiltro{
             buttonsFiltros[i].addEventListener('click', this.tiposFiltros);
         }
         document.getElementById("searchBar").addEventListener("keyup", function(event){
-            console.log('foi')
             const buscaInput = event.target.value
             const resultadoBusca  = ListenerFiltro.filtroAtivo(buscaInput)
-            TemplateVitrine.templateG(resultadoBusca, document.getElementById('vitrine'))
+            if(resultadoBusca.length !== 0){
+                TemplateVitrine.templateG(resultadoBusca, document.getElementById('vitrine'))
+            }else{
+                document.getElementById('vitrine').innerHTML = ''
+                const h2 = document.createElement('h6')
+                document.getElementById('vitrine').appendChild(h2)
+                h2.innerText = 'Produtos não encontrados'
+            }
         })
     }
     static tiposFiltros(event){
@@ -50,7 +55,7 @@ class ListenerFiltro{
                 TemplateVitrine.templateG(resultado, document.getElementById('vitrine'))
             } else{
                 document.getElementById('vitrine').innerHTML = ''
-                const h2 = document.createElement('h2')
+                const h2 = document.createElement('h6')
                 document.getElementById('vitrine').appendChild(h2)
                 h2.innerText = 'Produtos não encontrados'
             }

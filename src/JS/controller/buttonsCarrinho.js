@@ -5,14 +5,14 @@ let produtos = []
 let arrayCarrinho = []
 let totalPreco = 0
 let totalQuant = 0
-
+const teste = document.getElementById('carrinhoVazio')
 const h3totalPreco = document.getElementById('totalPreco')
 const h3totalQuant = document.getElementById('totalQuant')
 FetchProdutos.buscandoProdutos()
 .then(data => {
     data.forEach(element => produtos.push(element))
     TemplateVitrine.templateG(data,document.getElementById('vitrine'))
-}
+    }
 )
 class ListerButtons{
     static addCart(){
@@ -24,13 +24,14 @@ class ListerButtons{
                 TemplateCarrinho.templateG(arrayCarrinho,document.getElementById('carrinho'))
                 totalQuant += 1
                 totalPreco += clicado.preco
-                h3totalQuant.innerText = `Quantidade ${totalQuant}`
+                h3totalQuant.innerText = `${totalQuant}`
                 h3totalPreco.innerText = `R$ ${totalPreco.toFixed(2).replace('.',',')}`
                 arrayCarrinho.find(element => element.id === idClick).quant = 1
+                document.getElementById('testee').style.display = 'flex'
             }else{
                 totalQuant += 1
                 totalPreco += clicado.preco
-                h3totalQuant.innerText = `Quantidade ${totalQuant}`
+                h3totalQuant.innerText = `${totalQuant}`
                 arrayCarrinho.find(element => element.id === idClick).quant += 1
                 h3totalPreco.innerText = `R$ ${totalPreco.toFixed(2).replace('.',',')}`
             }
@@ -38,7 +39,6 @@ class ListerButtons{
     static removeCart(){
         const cliquei = event.target;
         const idClick = Number(cliquei.id)
-        // parseFloat(cliquei.id)
         const clicado = arrayCarrinho.find(element => element.id == idClick)
         totalQuant  -= clicado.quant
         totalPreco -= (clicado.quant)*(clicado.preco)
@@ -46,8 +46,15 @@ class ListerButtons{
             h3totalQuant.innerText = ''
             h3totalPreco.innerText = ''
             totalQuant = 0
+            document.getElementById('carrinho').innerHTML = `<div id = 'carrinhoVazio'>
+            <img src="./src/CSS/assets/shopping-bag.svg" alt="">
+            <h2 class="ops">Ops!</h2>
+            <span class='texto-carrinho'>Por enquanto não temos produtos no carrinho</span>
+        </div>`
+           document.getElementById('testee').style.display = 'none'
+            
         } else{
-            h3totalQuant.innerText = `Quantidade ${totalQuant}`
+            h3totalQuant.innerText = `${totalQuant}`
             h3totalPreco.innerText = `R$ ${totalPreco.toFixed(2).replace('.',',')}`
         }
         arrayCarrinho.splice(clicado,1)
