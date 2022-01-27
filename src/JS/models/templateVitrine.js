@@ -1,47 +1,57 @@
 import{ListerButtons} from '../controller/buttonsCarrinho.js'
 class TemplateVitrine{
     static templateU(item,tagTarget){
+        
         const div = document.createElement('div')
-        const div2 = document.createElement('div')
-        const figure = document.createElement('figure')
-        const img = document.createElement('img')
-        const figcaption = document.createElement('figcaption')
-        const h2 = document.createElement('h2')
-        const parag = document.createElement('p')
-        const h3 = document.createElement('h3')
-        const button = document.createElement('button')
-        let aparec = document.createElement('i')
-        const teste = document.createElement('div')
-
-
         tagTarget.appendChild(div)
-        div.setAttribute('class','cardV')
+
+        const div2 = document.createElement('div')
+        
+        
+        const figure = document.createElement('figure')
         div.appendChild(figure)
-        div2.setAttribute('class', 'div-categoria')
-        img.src = item.imagem
+        
+        const img = document.createElement('img')
         img.alt = item.descricao
-        img.setAttribute('class', 'testando')
+        img.src = item.imagem
         figure.appendChild(img)
+        
+        const figcaption = document.createElement('figcaption')
         div2.appendChild(figcaption)
         figcaption.innerHTML = `<img src=./src/CSS/assets/Icon_${item.categoria}.svg alt=""> ${item.categoria}`
         figure.appendChild(figcaption)
+        
+        const h2 = document.createElement('h2')
         div.appendChild(h2)
         h2.innerText = item.nome
-        parag.innerText = item.descricao 
+
+        const parag = document.createElement('p')
         div.appendChild(parag)
-        parag.setAttribute('class', 'testando2')
+        parag.innerText = item.descricao 
+        
+        const h3 = document.createElement('h3')
         div.appendChild(h3)
         h3.innerText = `R$ ${item.preco.toFixed(2).replace('.',',')}`
-        div.appendChild(button)
+
+        const valoresVitrine = document.createElement('div')
+        div.appendChild(valoresVitrine)
+        valoresVitrine.appendChild(h3)
+
+        const button = document.createElement('button')
+        valoresVitrine.appendChild(button)
+        
+        let aparec = document.createElement('i')
         button.appendChild(aparec)
-        aparec.setAttribute('class','fa fa-cart-arrow-down')
-        teste.appendChild(h3)
-        teste.appendChild(button)
-        teste.setAttribute('id', 'teste')
-        div.appendChild(teste)
+        
+        div.setAttribute('class','cardV')
+        div2.setAttribute('class', 'div-categoria')
+        img.setAttribute('class', 'cardImage')
+        valoresVitrine.setAttribute('id', 'valoresVitrine')
         button.setAttribute('class', 'btn-adicionar-carrinho')
         button.setAttribute('id', `${item.id}`)
+        aparec.setAttribute('class','fa fa-cart-arrow-down')
         aparec.setAttribute('id', `${item.id}`)
+
         button.addEventListener('click',ListerButtons.addCart)
     }
     static templateG(array,tagTarget){

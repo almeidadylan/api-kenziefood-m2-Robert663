@@ -2,16 +2,14 @@ import {TemplateVitrine} from '../models/templateVitrine.js'
 import {FetchProdutos} from '../router/fetchAPI.js'
 let produtos = []
 FetchProdutos.buscandoProdutos()
-.then(data => {
-    data.forEach(element => produtos.push(element))
-    TemplateVitrine.templateG(data,document.getElementById('vitrine'))
-    }
-)
+.then(data => data.forEach(element => produtos.push(element)))
+
+const vitrine = document.getElementById('vitrine')
 class ListenerFiltro{
     static filtroAtivo(pesquisa){
         pesquisa = pesquisa.toLowerCase().trim()
         const produtosFiltrados = produtos.filter(function(produto){
-            const {nome, secao} = produto
+            const {nome} = produto
             if(nome.toLowerCase().includes(pesquisa)){
                 return produto
             }
@@ -27,21 +25,21 @@ class ListenerFiltro{
             const buscaInput = event.target.value
             const resultadoBusca  = ListenerFiltro.filtroAtivo(buscaInput)
             if(resultadoBusca.length !== 0){
-                TemplateVitrine.templateG(resultadoBusca, document.getElementById('vitrine'))
+                TemplateVitrine.templateG(resultadoBusca, vitrine)
             }else{
-                document.getElementById('vitrine').innerHTML = ''
-                const h2 = document.createElement('h6')
-                document.getElementById('vitrine').appendChild(h2)
-                h2.innerText = 'Produtos não encontrados'
+                vitrine.innerHTML = ''
+                const h6 = document.createElement('h6')
+                vitrine.appendChild(h6)
+                h6.innerText = 'Produtos não encontrados'
             }
         })
     }
     static tiposFiltros(event){
         let produtosFiltrados = []
-        document.getElementById('vitrine').innerHTML = '';
+        vitrine.innerHTML = '';
         const click = event.target;
         if(click.id === 'todos'){
-            TemplateVitrine.templateG(produtos, document.getElementById('vitrine'))
+            TemplateVitrine.templateG(produtos, vitrine)
         } else if(click.id === 'buttonSearch'){
             const palavra = document.getElementById('searchBar').value.toLowerCase()
             let resultado = []
@@ -52,16 +50,16 @@ class ListenerFiltro{
                 }
             })
             if(resultado.length !== 0){
-                TemplateVitrine.templateG(resultado, document.getElementById('vitrine'))
+                TemplateVitrine.templateG(resultado, vitrine)
             } else{
-                document.getElementById('vitrine').innerHTML = ''
-                const h2 = document.createElement('h6')
-                document.getElementById('vitrine').appendChild(h2)
-                h2.innerText = 'Produtos não encontrados'
+                vitrine.innerHTML = ''
+                const h6 = document.createElement('h6')
+                vitrine.appendChild(h6)
+                h6.innerText = 'Produtos não encontrados'
             }
         } else{
             produtosFiltrados = produtos.filter(element => element.categoria.toLowerCase() === click.id)
-            TemplateVitrine.templateG(produtosFiltrados, document.getElementById('vitrine'))
+            TemplateVitrine.templateG(produtosFiltrados, vitrine)
         }
     }
 }
