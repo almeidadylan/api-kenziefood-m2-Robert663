@@ -4,7 +4,17 @@ body{
 }
 
 button{
-    height: 30px;
+    height: 40px;
+}
+#filtro button:hover{
+    border: 1.5px solid #212529;
+    border-radius: 30px;
+}
+#filtro button:nth-child(2){
+    background:  #fff7f4;
+}
+#filtro button:nth-child(3){
+    background: #ffe4ea;
 }
 #filtro button img{
     margin-right: 15px;
