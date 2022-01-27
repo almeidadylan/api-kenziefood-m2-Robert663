@@ -7,3 +7,5 @@ carrossel.js
 node_modules
 app.js
 server.js
+package-lock.json
+package.json
