@@ -188,10 +188,11 @@ h6{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    color:#4aca94;
 }
 .btn-adicionar-carrinho:hover{
-    background: cyan;
-    color: #fff;
+    background:#4aca94;
+    color: #e4f7ef;
     cursor: pointer;
 }
 
