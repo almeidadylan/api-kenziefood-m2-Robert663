@@ -45,11 +45,7 @@ class ListerButtons{
             <h2 class="ops">Ops!</h2>
             <span class='texto-carrinho'>Por enquanto não temos produtos no carrinho</span>
         </div>`
-<<<<<<< HEAD
-            document.getElementById('testee').style.display = 'none'
-=======
-           document.getElementById('valoresCarrinho').style.display = 'none'
->>>>>>> c73d6b58287366c6d8513544070d4c88813e022f
+            document.getElementById('valoresCarrinho').style.display = 'none'
             
         } else{
             h3totalQuant.innerText = `${totalQuant}`
