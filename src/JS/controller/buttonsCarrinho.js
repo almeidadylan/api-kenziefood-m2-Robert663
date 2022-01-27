@@ -8,7 +8,7 @@ let totalQuant = 0
 const h3totalPreco = document.getElementById('totalPreco')
 const h3totalQuant = document.getElementById('totalQuant')
 FetchProdutos.buscandoProdutos()
-.then(data =>    produtos = [...data])
+.then(data => data.forEach(element => produtos.push(element)))
 
 class ListerButtons{
     static addCart(){

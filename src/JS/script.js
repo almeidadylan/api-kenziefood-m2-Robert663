@@ -18,7 +18,7 @@ ListenerFiltro.addListenerHeader()
 
 FetchProdutos.buscandoProdutos()
 .then(data => {
-    produtos = [...data]
+    data.forEach(element => produtos.push(element))
     TemplateVitrine.templateG(data,document.getElementById('vitrine'))
-    }
+}
 )
