@@ -5,15 +5,11 @@ let produtos = []
 let arrayCarrinho = []
 let totalPreco = 0
 let totalQuant = 0
-const teste = document.getElementById('carrinhoVazio')
 const h3totalPreco = document.getElementById('totalPreco')
 const h3totalQuant = document.getElementById('totalQuant')
 FetchProdutos.buscandoProdutos()
-.then(data => {
-    data.forEach(element => produtos.push(element))
-    TemplateVitrine.templateG(data,document.getElementById('vitrine'))
-    }
-)
+.then(data => data.forEach(element => produtos.push(element)))
+
 class ListerButtons{
     static addCart(){
         const cliquei = event.target;
@@ -27,7 +23,7 @@ class ListerButtons{
                 h3totalQuant.innerText = `${totalQuant}`
                 h3totalPreco.innerText = `R$ ${totalPreco.toFixed(2).replace('.',',')}`
                 arrayCarrinho.find(element => element.id === idClick).quant = 1
-                document.getElementById('testee').style.display = 'flex'
+                document.getElementById('valoresCarrinho').style.display = 'flex'
             }else{
                 totalQuant += 1
                 totalPreco += clicado.preco
@@ -43,21 +39,24 @@ class ListerButtons{
         totalQuant  -= clicado.quant
         totalPreco -= (clicado.quant)*(clicado.preco)
         if(totalQuant <= 0){
-            h3totalQuant.innerText = ''
-            h3totalPreco.innerText = ''
             totalQuant = 0
             document.getElementById('carrinho').innerHTML = `<div id = 'carrinhoVazio'>
             <img src="./src/CSS/assets/shopping-bag.svg" alt="">
             <h2 class="ops">Ops!</h2>
             <span class='texto-carrinho'>Por enquanto não temos produtos no carrinho</span>
         </div>`
+<<<<<<< HEAD
             document.getElementById('testee').style.display = 'none'
+=======
+           document.getElementById('valoresCarrinho').style.display = 'none'
+>>>>>>> c73d6b58287366c6d8513544070d4c88813e022f
             
         } else{
             h3totalQuant.innerText = `${totalQuant}`
             h3totalPreco.innerText = `R$ ${totalPreco.toFixed(2).replace('.',',')}`
         }
-        arrayCarrinho.splice(clicado,1)
+        let number = arrayCarrinho.indexOf(clicado)
+        arrayCarrinho.splice(number, 1)
         TemplateCarrinho.templateG(arrayCarrinho,document.getElementById('carrinho'))
     }
 }

@@ -9,13 +9,13 @@ button{
 #filtro button img{
     margin-right: 15px;
 }
-#teste{
+#valoresVitrine{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
 }
-.testando{
+.cardImage{
     width: 294px;
 }
 label{
@@ -39,8 +39,6 @@ label{
 }
 p{
     height: 80px;
-}
-.testando2{
     line-height: 20px;
     height: 80px;
     font-weight: 400;
@@ -154,10 +152,7 @@ h6{
     justify-content: center;
     align-items: center;
 }
-#carrinhoVazioH{
-    display:none;
-}
-#testee{
+#valoresCarrinho{
     display: none;
     flex-direction: column;
     height: 100px;
@@ -166,6 +161,7 @@ h6{
 #qtd{
     display: flex;
     justify-content: space-between;
+    padding: 25px;
 }
 #valorTotal{
     display: none;
@@ -246,7 +242,7 @@ h6{
     height: 25px;
 }
 
-.teste{
+.valoresVitrine{
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -298,6 +294,9 @@ figcaption{
         width: 90%;
         margin-top: 5px;
     }
+    #qtd{
+        padding: 0;
+    }
     #searchBar{
         width: 311px;
         height: 49px;
@@ -346,7 +345,7 @@ figcaption{
         color: #fff;
         background-color: #ff2253;
     }
-    .testando:hover{
+    .cardImage:hover{
         border: none;
         border: 3px #ff2253 solid;
     }
@@ -421,12 +420,12 @@ figcaption{
         cursor: pointer;
     }
 
-    .testando{
+    .cardImage{
         border: 3px solid #FFE9EE;
         border-radius: 8px;
     }
 
-    .teste{
+    .valoresVitrine{
         display: flex;
     }
 
