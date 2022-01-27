@@ -4,8 +4,19 @@ body{
 }
 
 button{
-    height: 30px;
+    height: 40px;
 }
+#filtro button:hover{
+    border: 1.5px solid #212529;
+    border-radius: 30px;
+}
+#filtro button:nth-child(2){
+    background:  #fff7f4;
+}
+#filtro button:nth-child(3){
+    background: #ffe4ea;
+}
+
 #filtro button img{
     margin-right: 15px;
 }
@@ -138,7 +149,7 @@ h6{
 }
 #carrinho{
     margin-left: 15px;
-    height: 432.84px;
+    height: 530px;
     background: #F8F9FA;
     display: flex;
     flex-direction: column;
@@ -258,11 +269,11 @@ h6{
     border: solid 1px #212529;
 }
 #panificadora{
-    background: #fff7f4;
+    /* background: #fff7f4; */
     border: none;
 }
 #frutas{
-    background: #ffe4ea;
+    /* background: #ffe4ea; */
     border: none;
 }
 #bebidas{

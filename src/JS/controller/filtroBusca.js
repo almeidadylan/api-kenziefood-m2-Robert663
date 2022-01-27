@@ -2,7 +2,7 @@ import {TemplateVitrine} from '../models/templateVitrine.js'
 import {FetchProdutos} from '../router/fetchAPI.js'
 let produtos = []
 FetchProdutos.buscandoProdutos()
-.then(data => data.forEach(element => produtos.push(element)))
+.then(data =>   produtos = [...data])
 
 const vitrine = document.getElementById('vitrine')
 class ListenerFiltro{
