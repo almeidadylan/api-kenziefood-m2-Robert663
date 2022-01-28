@@ -6,9 +6,6 @@ body{
 button{
     height: 40px;
 }
-img{
-    background: none;
-}
 #filtro button:hover{
     border: 1.5px solid #212529;
     border-radius: 30px;
@@ -19,6 +16,7 @@ img{
 #filtro button:nth-child(3){
     background: #ffe4ea;
 }
+
 #filtro button img{
     margin-right: 15px;
 }
@@ -151,7 +149,7 @@ h6{
 }
 #carrinho{
     margin-left: 15px;
-    height: 532px;
+    height: 530px;
     background: #F8F9FA;
     display: flex;
     flex-direction: column;
@@ -190,11 +188,10 @@ h6{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color:#4aca94;
 }
 .btn-adicionar-carrinho:hover{
-    background:#4aca94;
-    color: #e4f7ef;
+    background: cyan;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -272,11 +269,11 @@ h6{
     border: solid 1px #212529;
 }
 #panificadora{
-    background: #fff7f4;
+    /* background: #fff7f4; */
     border: none;
 }
 #frutas{
-    background: #ffe4ea;
+    /* background: #ffe4ea; */
     border: none;
 }
 #bebidas{
@@ -364,35 +361,28 @@ figcaption{
         border: 3px #ff2253 solid;
     }
     #todos{
+        height: 30px;
         cursor: pointer;
     }
-    #todos:hover{
-        background-color: #ff2253;
-        color: #fff;
-    }
+ 
     #panificadora{
+        height: 30px;
         border: none;
         cursor: pointer;
-    }
-    #panificadora:hover{
-        border: solid 1px #212529;
     }
 
     #frutas{
+        height: 30px;
         border: none;
         cursor: pointer;
     }
-    #frutas:hover{
-        border: #212529 solid 1px;
+  
+    #bebidas{
+        height: 30px;
+        border: none;
+        cursor: pointer;
     }
 
-    #bebidas{
-        border: none;
-        cursor: pointer;
-    }
-    #bebidas:hover{
-        border: #212529 solid 1px;
-    }
 
 
     #searchBar:hover::placeholder{
